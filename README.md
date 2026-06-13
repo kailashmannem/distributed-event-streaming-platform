@@ -28,4 +28,5 @@ Replication across multiple data centeres is biggest hurdle in the industry. The
 - Network partitions
 - Conflict resolution
 - Failover
+<br>
 So there is a need to maintain eventual consistency over different servers around the world.

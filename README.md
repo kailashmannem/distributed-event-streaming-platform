@@ -1,4 +1,4 @@
-# Kubernetes Native Distributed Event Streaming Platform
+# Distributed Event Streaming Platform
 
 ## What are we trying to solve here?
 
@@ -34,3 +34,10 @@ So there is a need to maintain eventual consistency over different servers aroun
 ## Findings
 - Experiment run over two users shows inconsistent hashing as they can both point to the same partition.
 - Implementing own hashing algorithms: Continuous and Rendezvous as kafka supports injecting the specific partition we want the message to land.
+
+## Q&A
+
+Why don't we use Redis or any database to map the keys to their partition?
+- We can very well use Redis or any database to have a consistent mapping but the real problems rises when the user base grows to 100 million customers.
+- For a 10K user base you don't really see any problems but once you see the growth overheads like network hop, infrastructure, latency and failure point gets added to the picture.
+- Hashing do not require any of those and that is why distributed systems love it!

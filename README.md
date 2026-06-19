@@ -30,3 +30,7 @@ Replication across multiple data centeres is biggest hurdle in the industry. The
 - Failover
 <br>
 So there is a need to maintain eventual consistency over different servers around the world.
+
+## Findings
+- Experiment run over two users shows inconsistent hashing as they can both point to the same partition.
+- Implementing own hashing algorithms: Continuous and Rendezvous as kafka supports injecting the specific partition we want the message to land.

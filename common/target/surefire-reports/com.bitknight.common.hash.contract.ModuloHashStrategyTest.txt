@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.bitknight.common.hash.contract.ModuloHashStrategyTest
+-------------------------------------------------------------------------------
+Tests run: 54, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.177 s <<< FAILURE! -- in com.bitknight.common.hash.contract.ModuloHashStrategyTest
+com.bitknight.common.hash.contract.ModuloHashStrategyTest.shouldHandleLargePartitionCount -- Time elapsed: 0.046 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.bitknight.common.hash.contract.PartitionStrategyTest.shouldHandleLargePartitionCount(PartitionStrategyTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.bitknight.common.hash.contract.ModuloHashStrategyTest.partitionShouldAlwaysBeWithinRange -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.bitknight.common.hash.contract.PartitionStrategyTest.partitionShouldAlwaysBeWithinRange(PartitionStrategyTest.java:26)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

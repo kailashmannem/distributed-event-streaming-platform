@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class RendezvousHashStrategy implements PartitionStrategy{
     private final MessageDigest messageDigest;
-    RendezvousHashStrategy(MessageDigest messageDigest) {
+    public RendezvousHashStrategy() {
         try {
             this.messageDigest = MessageDigest.getInstance("SHA-256");
         }

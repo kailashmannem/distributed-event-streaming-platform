@@ -1,0 +1,9 @@
+com\bitknight\common\hash\simulation\CollisionTest.class
+com\bitknight\common\hash\util\TestUtils.class
+com\bitknight\common\hash\simulation\KeyMovementTest.class
+com\bitknight\common\hash\contract\RendezvousHashStrategyTest.class
+com\bitknight\common\hash\simulation\PerformanceTest.class
+com\bitknight\common\hash\contract\PartitionStrategyTest.class
+com\bitknight\common\hash\contract\ModuloHashStrategyTest.class
+com\bitknight\common\hash\simulation\DistributionTest.class
+com\bitknight\common\hash\simulation\ScalingTest.class

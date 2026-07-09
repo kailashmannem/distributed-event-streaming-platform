@@ -16,39 +16,17 @@ public class DistributionTest {
 
     @Test
     void shouldDistributeKeysEvenly() {
-
-        PartitionStrategy strategy =
-                new RendezvousHashStrategy();
-
-        List<String> keys =
-                TestUtils.generateKeys(KEY_COUNT);
-
-        int[] distribution =
-                new int[PARTITIONS];
-
+        PartitionStrategy strategy = new RendezvousHashStrategy();
+        List<String> keys = TestUtils.generateKeys(KEY_COUNT);
+        int[] distribution = new int[PARTITIONS];
         for (String key : keys) {
-
-            int partition =
-                    strategy.getPartition(
-                            key,
-                            PARTITIONS
-                    );
-
+            int partition = strategy.getPartition(key, PARTITIONS);
             distribution[partition]++;
         }
-
         TestUtils.printDistribution(distribution);
-
-        double expected =
-                TestUtils.expectedAverage(
-                        KEY_COUNT,
-                        PARTITIONS
-                );
-
+        double expected = TestUtils.expectedAverage(KEY_COUNT, PARTITIONS);
         double tolerance = expected * 0.10;
-
         for (int count : distribution) {
-
             assertTrue(
                     Math.abs(count - expected)
                             <= tolerance,

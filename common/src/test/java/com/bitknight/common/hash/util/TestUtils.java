@@ -18,11 +18,7 @@ public final class TestUtils {
     public static void printDistribution(int[] distribution) {
         System.out.println();
         for (int i = 0; i < distribution.length; i++) {
-            System.out.printf(
-                    "Partition %d -> %d%n",
-                    i,
-                    distribution[i]
-            );
+            System.out.printf("Partition %d -> %d%n", i, distribution[i]);
         }
         System.out.println();
     }

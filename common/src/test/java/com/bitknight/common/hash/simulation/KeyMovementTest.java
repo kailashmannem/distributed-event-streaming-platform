@@ -16,40 +16,27 @@ public class KeyMovementTest {
 
     @Test
     void compareKeyMovement() {
-
         compare(new ModuloHashStrategy(), "Modulo");
         compare(new RendezvousHashStrategy(), "Rendezvous");
     }
 
-    private void compare(PartitionStrategy strategy,
-                         String strategyName) {
-
+    private void compare(PartitionStrategy strategy, String strategyName) {
         List<String> keys = TestUtils.generateKeys(KEY_COUNT);
-
         Map<String, Integer> before = new HashMap<>();
         Map<String, Integer> after = new HashMap<>();
-
         for (String key : keys) {
-            before.put(key,
-                    strategy.getPartition(key, 3));
+            before.put(key, strategy.getPartition(key, 3));
         }
-
         for (String key : keys) {
-            after.put(key,
-                    strategy.getPartition(key, 6));
+            after.put(key, strategy.getPartition(key, 6));
         }
-
         int moved = 0;
-
         for (String key : keys) {
-
             if (!before.get(key).equals(after.get(key))) {
                 moved++;
             }
         }
-
-        double percentage =
-                (moved * 100.0) / KEY_COUNT;
+        double percentage = (moved * 100.0) / KEY_COUNT;
 
         System.out.println();
         System.out.println("===============================");

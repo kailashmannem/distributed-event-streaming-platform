@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class CollisionTest {
+public class PartitionDistributionTest {
 
     @Test
-    void collisionAnalysis() {
+    void partitionAnalysis() {
         PartitionStrategy strategy = new RendezvousHashStrategy();
         int partitions = 10;
         int[] buckets = new int[partitions];

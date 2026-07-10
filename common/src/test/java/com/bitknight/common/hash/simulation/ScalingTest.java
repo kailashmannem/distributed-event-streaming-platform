@@ -1,7 +1,7 @@
 package com.bitknight.common.hash.simulation;
 
+import com.bitknight.common.hash.ModuloHashStrategy;
 import com.bitknight.common.hash.PartitionStrategy;
-import com.bitknight.common.hash.RendezvousHashStrategy;
 import com.bitknight.common.hash.util.TestUtils;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ScalingTest {
 
-    private final PartitionStrategy strategy = new RendezvousHashStrategy();
+    private final PartitionStrategy strategy = new ModuloHashStrategy();
 
     @Test
     void scalingAnalysis() {
